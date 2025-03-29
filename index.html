@@ -3,7 +3,33 @@
 <p>很高兴你来到这里, 你可以在下面的网站找到我</p>
 
 <ul>
-  <li> <a href="https://space.bilibili.com/3493263994521891?spm_id_from=333.337.0.0">B站</a> </li>
-  <li> <a href="https://ltxsystem.mysxl.cn/">我的sxl网站(很少更新)</a> </li>
-  <li> <a href="https://smugzs.mysxl.cn">工作室</a> </li>
+  <li> <a   一个 href="https://space.bilibili.com/3493263994521891?spm_id_from=333.337.0.0">B站</a   一个> </li>
+  <li> <a   一个 href="https://ltxsystem.mysxl.cn/">我的sxl网站(很少更新)</a   一个> </li>
+  <li> <a   一个 href="https://smugzs.mysxl.cn">工作室</a   一个> </li>
 </ul>
+<span id="runtimeSpan" style="color: #ff0000;"></span>
+<script type="text/javascript">
+    function showRuntime(){
+        window.setTimeout("showRuntime()", 1000);
+        var startTime = new Date("3/10/2020 00:00:00"); 
+        var nowTime = new Date();
+        var timestamp = (nowTime.getTime() - startTime.getTime());
+        var oneDayMilliseconds = 24*60*60*1000;
+        var totalDaysTmp = timestamp / oneDayMilliseconds;
+        var totalDays = Math.floor(totalDaysTmp);
+        var yuHoursTmp = (totalDaysTmp - totalDays) * 24;
+        var yuHours = Math.floor(yuHoursTmp);
+        var yuMinutesTmp = (yuHoursTmp - yuHours) * 60;
+        var yuMinutes = Math.floor((yuHoursTmp - yuHours) * 60);
+        var yuSeconds = Math.floor((yuMinutesTmp - yuMinutes) * 60);
+        var yuHours = yuHours < 10 ? '0' + yuHours : yuHours;
+        var yuMinutes = yuMinutes < 10 ? '0' + yuMinutes : yuMinutes;
+        var yuSeconds = yuSeconds < 10 ? '0' + yuSeconds : yuSeconds;
+        runtimeSpan.innerHTML = "本站已安全运行: " + totalDays + "天" + yuHours + "小时" + yuMinutes + "分" + yuSeconds + "秒";
+    }
+    showRuntime();
+</script>
+<style>   < >风格
+    #runtimeSpan{animation: change 10s infinite;font-weight: 800;}
+    @keyframes change{0%{color:#AAC9CE;}25%{color:#F56A79;}50%{color:#1AA6B7;}75%{color:#FCF9F0;}100%{color:#E73B3E;}}
+</style>
